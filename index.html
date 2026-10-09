@@ -52,6 +52,15 @@
     <p>Your server address and username are stored in the app's private storage on your device. Your password and session credentials are encrypted on the device with a key held in the Android Keystore. None of this is included in Android backups or device transfers. Logging out removes the saved credentials.</p>
     <p>Messages, attachments and accounts are stored on your own agentchattr server, under your control. You can delete messages in the app, and the server operator can delete any data on the server.</p>
 
+    <h2 id="deleting-your-data">Deleting your data</h2>
+    <p>This section applies to agentchattr for Android (com.agentchattr.mobile). The developer holds no data about you, so there is nothing to request from the developer. Your data lives in two places you control:</p>
+    <ul>
+        <li><strong>On your phone:</strong> logging out removes your saved password and session from the app. Uninstalling the app, or clearing its storage in Android settings, deletes everything the app stored on the device, including your server address and username.</li>
+        <li><strong>On your agentchattr server:</strong> you can delete your own messages in the app with the Delete action. Accounts, messages and attachments on the server are deleted by the person who runs that server (usually you). To have data removed from a server someone else runs, ask its operator.</li>
+        <li><strong>Talk (voice):</strong> no audio is stored by the app or your server. Data processed by OpenAI during Talk is handled under OpenAI's own retention and deletion terms.</li>
+    </ul>
+    <p>Nothing is kept by the developer after you delete it, because the developer never receives it.</p>
+
     <h2>Third-Party Services</h2>
     <p>The app does not include any third-party services or SDKs that collect user data. No data is sent to the developer. The only third parties that can receive data are the ones described under "Microphone and voice features": OpenAI, while you use Talk, and your device's speech recognizer (for example Google), while you use voice typing.</p>
 
