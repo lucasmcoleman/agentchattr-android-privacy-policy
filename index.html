@@ -22,22 +22,38 @@
     <p>This privacy policy applies to agentchattr for Android (com.agentchattr.mobile), distributed via Google Play Console testing. The app is a client for agentchattr, a chat room for people and AI agents that you host yourself. It connects only to the server address you enter.</p>
 
     <h2>Data Collection</h2>
-    <p>The developer does not collect any data. The app has no analytics, tracking, advertising or telemetry of any kind. Messages you send and files you choose to attach go only to the agentchattr server you connect to, over an encrypted HTTPS connection. The app does not allow unencrypted connections.</p>
+    <p>The developer does not collect any data. The app has no analytics, tracking, advertising or telemetry of any kind. Messages you send and files you choose to attach go only to the agentchattr server you connect to, over an encrypted HTTPS connection. The app does not allow unencrypted connections. The two optional voice features below are the only exceptions, and only while you are using them.</p>
+
+    <h2>Microphone and voice features</h2>
+    <p>The app uses the microphone only while you are actively using <strong>Talk</strong> or <strong>voice typing</strong>. Android asks for your permission the first time, and you can withdraw it at any time in Android settings. The app never records audio in the background and does not store any recordings.</p>
+    <p><strong>Talk (live voice)</strong> is a hands-free conversation with a voice assistant for your agentchattr room. It is provided by <a href="https://openai.com/">OpenAI</a>'s realtime voice API, a third party. When you start Talk:</p>
+    <ul>
+        <li>The app asks your own agentchattr server to open the session. Your server holds the OpenAI API key, which never reaches the phone.</li>
+        <li>Your voice is then streamed, encrypted, directly from the phone to OpenAI to be transcribed and answered. The audio does not pass through or get stored on your agentchattr server, and the app does not save it.</li>
+        <li>So that the assistant can read the room to you and act for you, OpenAI also receives the names of your channels, new agent messages in the channel you are viewing, and any recent messages it reads from the room when you ask what is going on.</li>
+        <li>Messages the assistant posts for you are saved on your agentchattr server like any other message, marked as sent by voice. No audio or transcript of the conversation is stored by the app or by your agentchattr server.</li>
+        <li>OpenAI processes this data under its own terms and <a href="https://openai.com/policies/privacy-policy/">privacy policy</a>.</li>
+    </ul>
+    <p>Talk only works if the operator of your agentchattr server has enabled it, and it stops as soon as you hang up. While it is running, the app shows an ongoing "Talk is live" notification.</p>
+    <p><strong>Voice typing</strong> turns your speech into text in the message box, using your phone's built-in Android speech recognizer. Depending on your device and settings, that recognizer may process your speech on the device or send it to Google (or your device maker) to be recognized, under their privacy policies. Nothing is sent to your agentchattr server until you press Send.</p>
 
     <h2>Permissions</h2>
     <table>
         <tr><th>Permission</th><th>Purpose</th></tr>
         <tr><td>Internet and network state</td><td>Connect to your agentchattr server and reconnect when the network changes.</td></tr>
-        <tr><td>Notifications</td><td>Show new messages and mentions from your server while the app is in the background.</td></tr>
+        <tr><td>Notifications</td><td>Show new messages and mentions from your server while the app is in the background, and the ongoing notification while Talk is live.</td></tr>
+        <tr><td>Microphone (record audio)</td><td>Hear you during Talk and voice typing, only while you are using them.</td></tr>
+        <tr><td>Modify audio settings</td><td>Route Talk audio to the loudspeaker or a connected headset during a call.</td></tr>
+        <tr><td>Foreground service (microphone)</td><td>Keep a Talk call running when the screen turns off, with a visible notification and a Hang up button.</td></tr>
     </table>
-    <p>Files you attach are picked with the Android file picker. The app does not request storage, camera, microphone, location or contacts permissions.</p>
+    <p>Files you attach are picked with the Android file picker. The app does not request storage, camera, location or contacts permissions.</p>
 
     <h2>Data Storage</h2>
     <p>Your server address and username are stored in the app's private storage on your device. Your password and session credentials are encrypted on the device with a key held in the Android Keystore. None of this is included in Android backups or device transfers. Logging out removes the saved credentials.</p>
     <p>Messages, attachments and accounts are stored on your own agentchattr server, under your control. You can delete messages in the app, and the server operator can delete any data on the server.</p>
 
     <h2>Third-Party Services</h2>
-    <p>The app does not include any third-party services or SDKs that collect user data. No data is sent to the developer or to any third party.</p>
+    <p>The app does not include any third-party services or SDKs that collect user data. No data is sent to the developer. The only third parties that can receive data are the ones described under "Microphone and voice features": OpenAI, while you use Talk, and your device's speech recognizer (for example Google), while you use voice typing.</p>
 
     <h2>Children's Privacy</h2>
     <p>This app is not directed at children under 13. It is a tool for people who run their own agentchattr server.</p>
